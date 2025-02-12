@@ -17,6 +17,7 @@ import Settings from "./pages/dashboard/Settings";
 import Profile from "./pages/Profile";
 import AdminDashboard from "./pages/admin/Dashboard";
 import AddScholarship from "./pages/admin/AddScholarship";
+import ManageScholarships from "./pages/admin/ManageScholarships";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/profile" element={<Profile />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/add-scholarship" element={<AddScholarship />} />
+          <Route path="/admin/dashboard/scholarships" element={<ManageScholarships />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
