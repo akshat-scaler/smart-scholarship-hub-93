@@ -15,6 +15,7 @@ import SavedScholarships from "./pages/dashboard/SavedScholarships";
 import Applications from "./pages/dashboard/Applications";
 import Settings from "./pages/dashboard/Settings";
 import Profile from "./pages/Profile";
+import AdminDashboard from "./pages/admin/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/dashboard/applications" element={<Applications />} />
           <Route path="/dashboard/settings" element={<Settings />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
