@@ -10,6 +10,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Scholarships from "./pages/Scholarships";
+import ScholarshipDetails from "./pages/ScholarshipDetails";
 import SavedScholarships from "./pages/dashboard/SavedScholarships";
 import Applications from "./pages/dashboard/Applications";
 import Settings from "./pages/dashboard/Settings";
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/scholarships" element={<Scholarships />} />
+          <Route path="/scholarships/:id" element={<ScholarshipDetails />} />
           <Route path="/dashboard/saved" element={<SavedScholarships />} />
           <Route path="/dashboard/applications" element={<Applications />} />
           <Route path="/dashboard/settings" element={<Settings />} />
