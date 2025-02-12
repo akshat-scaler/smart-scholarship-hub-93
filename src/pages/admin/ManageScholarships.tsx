@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -15,6 +14,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { format } from "date-fns";
+import { DateRange } from "react-day-picker";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -54,7 +54,7 @@ import AdminSidebar from "@/components/admin/AdminSidebar";
 const ManageScholarships = () => {
   const { toast } = useToast();
   const [selectedScholarships, setSelectedScholarships] = useState<string[]>([]);
-  const [dateRange, setDateRange] = useState<{ from: Date; to: Date } | undefined>();
+  const [dateRange, setDateRange] = useState<DateRange | undefined>();
 
   const scholarships = [
     {
@@ -119,7 +119,6 @@ const ManageScholarships = () => {
         <AdminSidebar />
         <main className="flex-1 bg-gray-50">
           <div className="p-8">
-            {/* Header */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -144,7 +143,6 @@ const ManageScholarships = () => {
               </div>
             </motion.div>
 
-            {/* Search & Filters */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -212,7 +210,6 @@ const ManageScholarships = () => {
               </Card>
             </motion.div>
 
-            {/* Scholarships Table */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -337,7 +334,6 @@ const ManageScholarships = () => {
               </Card>
             </motion.div>
 
-            {/* Footer */}
             <footer className="mt-8 border-t pt-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
