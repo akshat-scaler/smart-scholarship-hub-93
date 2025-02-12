@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -100,11 +99,15 @@ const ScholarshipDetails = () => {
         <Breadcrumb className="mb-6">
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink as={Link} to="/">Home</BreadcrumbLink>
+              <Link to="/" className="text-sm font-medium opacity-60 hover:opacity-100">
+                Home
+              </Link>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink as={Link} to="/scholarships">Scholarships</BreadcrumbLink>
+              <Link to="/scholarships" className="text-sm font-medium opacity-60 hover:opacity-100">
+                Scholarships
+              </Link>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
