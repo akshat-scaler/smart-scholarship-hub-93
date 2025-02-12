@@ -18,6 +18,7 @@ import Profile from "./pages/Profile";
 import AdminDashboard from "./pages/admin/Dashboard";
 import AddScholarship from "./pages/admin/AddScholarship";
 import ManageScholarships from "./pages/admin/ManageScholarships";
+import ReviewApplications from "./pages/admin/ReviewApplications";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/add-scholarship" element={<AddScholarship />} />
           <Route path="/admin/dashboard/scholarships" element={<ManageScholarships />} />
+          <Route path="/admin/dashboard/applications" element={<ReviewApplications />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
